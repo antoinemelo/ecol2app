@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>ecol2app</title>
+  <link rel="stylesheet" href="css/framework7-icons.css">
+  <link rel="stylesheet" href="css/framework7.ios.min.css">
+  <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Statusbar -->
+    <!-- NOTE: You may need to comment out the next line depending on what device you're running on and see the app title cut off -->
+    <f7-statusbar></f7-statusbar>
+
+    <!-- Left Panel -->
+    <f7-panel left reveal layout="dark">
+      <f7-view id="left-panel-view" navbar-through :dynamic-navbar="true">
+        <f7-navbar title="informations"></f7-navbar>
+        <f7-pages>
+          <f7-page>
+            <f7-list>
+              <f7-list-item link="/about/" title="À propos"></f7-list-item>
+              <f7-list-item link="/form/" title="WiP"></f7-list-item>
+            </f7-list>
+          </f7-page>
+        </f7-pages>
+		</f7-view>
+    </f7-panel>
+    <!-- Right Panel -->
+
+    <f7-panel right cover layout="dark">
+      <f7-view id="right-panel-view" navbar-through :dynamic-navbar="true">
+        <f7-navbar title="menu" sliding></f7-navbar>
+        <f7-pages>
+          <f7-page>
+            <f7-block-title>Domaines de compétences</f7-block-title>
+            <f7-list>
+				<f7-list-item><a href="#" onclick="window.open('page-eco.html','_self',false);">Économie</a></f7-list-item>
+				<f7-list-item><a href="#" onclick="window.open('page-ges.html','_self',false);">Gestion</a></f7-list-item>
+				<f7-list-item><a href="#" onclick="window.open('page-ica.html','_self',false);">Information Communication & Admin. (ICA)</a></f7-list-item>
+            </f7-list>
+           	<center><f7-link open-login-screen="#login-screen" link-view="#main-view" link-close-panel><i class="f7-icons size-50">person</i></f7-button></center>
+          </f7-page>
+        </f7-pages>
+      </f7-view>
+    </f7-panel>
+
+    <!-- Main Views -->
+    <f7-views>
+      <f7-view id="main-view" navbar-through :dynamic-navbar="true" main>
+        <!-- Navbar -->
+        <f7-navbar>
+          <f7-nav-left>
+            <f7-link open-panel="left"><i class="f7-icons size-50">info</i></f7-link>
+          </f7-nav-left>
+          <f7-nav-center sliding>mon ecol2com</f7-nav-center>
+          <f7-nav-right>
+            <f7-link open-panel="right"><i class="f7-icons size-50">bars</i></f7-link>
+          </f7-nav-right>
+        </f7-navbar>
+        <!-- Pages -->
+        <f7-pages>
+          <f7-page>
+            <f7-block-title>
+				<center><img data-src="img/logo.png" style="width:42px;" class="lazy"></center>
+				Bienvenue</f7-block-title>
+            <f7-block inner>
+				<p>Découvrir des solutions et documents de formation en commerce, ouverts, simplement.</p>
+            </f7-block>
+            <f7-block>
+              <f7-grid>
+                <f7-col width="50">
+                  <center><f7-link open-login-screen="#login-screen"><i class="f7-icons size-50">person</i></f7-button></center>
+                </f7-col>
+                <f7-col width="50">
+                  <center><f7-link open-popup="#popup"><i class="f7-icons size-50">email</i></f7-button></center>
+                </f7-col>
+              </f7-grid>
+            </f7-block>
+           <f7-block-title>Activités & documentation</f7-block-title>
+            <f7-list>
+				<f7-list-item><a href="#" onclick="window.open('page-eco.html','_self',false);">Économie</a></f7-list-item>
+				<f7-list-item><a href="#" onclick="window.open('page-ges.html','_self',false);">Gestion</a></f7-list-item>
+				<f7-list-item><a href="#" onclick="window.open('page-ica.html','_self',false);">Information Communication & Admin. (ICA)</a></f7-list-item>
+            </f7-list>
+          </f7-page>
+        </f7-pages>
+      </f7-view>
+    </f7-views>
+
+    <!-- Popup -->
+    <f7-popup id="popup">
+      <f7-view navbar-fixed>
+        <f7-pages>
+          <f7-page>
+            <f7-navbar title="Nous adorons vous lire :-)">
+              <f7-nav-right>
+                <f7-link close-popup>Fermer</f7-link>
+              </f7-nav-right>
+            </f7-navbar>
+            <f7-block>
+            
+à venir.
+            
+            </f7-block>
+          </f7-page>
+        </f7-pages>
+      </f7-view>
+    </f7-popup>
+
+    <!-- Login Screen -->
+    <f7-login-screen id="login-screen">
+      <f7-view>
+        <f7-pages>
+			<f7-page login-screen>
+				<center><f7-link title="Logout" close-login-screen><i class="f7-icons size-50">logout</i> retour</f7-link></center>
+				<iframe src="http://ecol2.com/ecol2com/tools/grades/" frameborder="0" border="0" cellspacing="0" style="border-style: none;width: 100%; height: 100%;"></iframe>
+			</f7-page>
+        </f7-pages>
+      </f7-view>
+    </f7-login-screen>
+  </div>
+    <!-- Login Screen -->
+    <f7-login-screen id="login-screenA">
+      <f7-view>
+        <f7-pages>
+          <f7-page login-screen>
+            <f7-login-screen-title>Se connecter</f7-login-screen-title>
+            <f7-list form>
+              <f7-list-item>
+                <f7-label>Nom d'utilisateur</f7-label>
+                <f7-input name="username" placeholder="Nom d'utilisateur" type="text"></f7-input>
+              </f7-list-item>
+              <f7-list-item>
+                <f7-label>Mot de passe</f7-label>
+                <f7-input name="password" type="password" placeholder="Mot de passe"></f7-input>
+              </f7-list-item>
+            </f7-list>
+            <f7-list>
+				<center>
+					<f7-link title="Logout" close-login-screen><i class="f7-icons size-50">logout</i></f7-link>
+					<a href="#" onclick="window.open('http://ecol2.com/ecol2com/tools/grades/','_self',false);"><i class="f7-icons size-50">login</i></a>
+		<iframe src="http://ecol2.com/ecol2com/filter/links/simple.html?c=ICA_TT&c=Transparent&c=THEO.&c=DIDA.&c=EVAL.&c=EXER.&c=FAQS&c=RESU.&c=MEDIA&c=SITE" frameborder="0" border="0" cellspacing="0" style="border-style: none;width: 100%; height: 100%;"></iframe>
+					<f7-list-label>
+						<p>Cliquer sur le signe "logout" pour revenir en arrière</p>
+					</f7-list-label>
+				</center>
+            </f7-list>
+          </f7-page>
+        </f7-pages>
+      </f7-view>
+    </f7-login-screen>
+  </div>
+
+  <!-- About Page Template -->
+  <template id="page-about">
+    <f7-page>
+      <f7-navbar title="À propos" back-link="retour" sliding></f7-navbar>
+      <f7-block inner>
+        <p>Merci pour votre intérêt!</p>
+        <p>
+        	Vous pouvez me contacter en soir, au <a href=\"tel:+41227713303\" data-rel=\"external\">+41 22 771 3303</a> ou en m'envoyant un courriel à <a href=\"mailto:antoine.melo@edu.ge.ch\" data-rel=\"external\">antoine.melo@edu.ge.ch</a>
+        </p>
+        <p>
+        	Mon adresse professionnelle est la suivante: ECCG Aimée-Stitelmann, 24 rte de Base, 1228 Plan-les-Ouates. Le secrétariat est ouvert de 8h à 17h15, avec une pause entre 12h et 13h15. Vous pouvez les contacter au <a href=\"tel:+41223882050\" data-rel=\"external\">+41 22 388 2050</a>.
+        </p>
+        <p>
+        	<br>Antoine Melo<hr><small>profil <a href=\"https://ch.linkedin.com/in/amelo\">Linkedin </a></small>
+        </p>
+        <p><center><f7-link back>retour</f7-link></center></p>
+      </f7-block>
+    </f7-page>
+  </template>
+  
+  <!-- ICA -->
+  <template id="page-ica">
+    <f7-page>
+      <f7-navbar title="ICA" back-link="retour" sliding></f7-navbar>
+      <f7-block inner>
+        <p>Merci pour votre intérêt</p>
+		<iframe src="http://ecol2.com/ecol2com/filter/links/simple.html?c=ICA_TT&c=Transparent&c=THEO.&c=DIDA.&c=EVAL.&c=EXER.&c=FAQS&c=RESU.&c=MEDIA&c=SITE" frameborder="0" border="0" cellspacing="0" style="border-style: none;width: 100%; height: 100%;"></iframe>
+        <p><center><f7-link back>retour</f7-link></center></p>
+      </f7-block>
+    </f7-page>
+  </template>
+
+  <!-- Form Page Template -->
+  <template id="page-form">
+    <f7-page>
+      <f7-navbar title="Form" back-link="Back" sliding></f7-navbar>
+      <f7-block-title>Form</f7-block-title>
+      <f7-list form>
+        <f7-list-item>
+          <f7-label>Name</f7-label>
+          <f7-input type="text" placeholder="Name"></f7-input>
+        </f7-list-item>
+        <f7-list-item>
+          <f7-label>Password</f7-label>
+          <f7-input type="password" placeholder="Password"></f7-input>
+        </f7-list-item>
+        <f7-list-item>
+          <f7-label>E-mail</f7-label>
+          <f7-input type="email" placeholder="E-mail"></f7-input>
+        </f7-list-item>
+        <f7-list-item>
+          <f7-label>URL</f7-label>
+          <f7-input type="url" placeholder="URL"></f7-input>
+        </f7-list-item>
+        <f7-list-item>
+          <f7-label>Phone</f7-label>
+          <f7-input type="tel" placeholder="Phone"></f7-input>
+        </f7-list-item>
+        <f7-list-item>
+          <f7-label>Birth date</f7-label>
+          <f7-input type="date" placeholder="Birth date" value="2014-04-30"></f7-input>
+        </f7-list-item>
+        <f7-list-item>
+          <f7-label>Date time</f7-label>
+          <f7-input type="datetime-local"></f7-input>
+        </f7-list-item>
+        <f7-list-item>
+          <f7-label>Gender</f7-label>
+          <f7-input type="select">
+            <option value="1">Male</option>
+            <option value="1">Female</option>
+          </f7-input>
+        </f7-list-item>
+        <f7-list-item>
+          <f7-label>Switch</f7-label>
+          <f7-input type="switch"></f7-input>
+        </f7-list-item>
+        <f7-list-item>
+          <f7-label>Range</f7-label>
+          <f7-input type="range" min="0" max="100" step="1" value="90"></f7-input>
+        </f7-list-item>
+        <f7-list-item>
+          <f7-label>Textarea</f7-label>
+          <f7-input type="textarea" placeholder="Textarea"></f7-input>
+        </f7-list-item>
+      </f7-list>
+
+      <f7-block-title>Form With Floating Labels</f7-block-title>
+      <f7-list form>
+        <f7-list-item>
+          <f7-label floating>Name</f7-label>
+          <f7-input type="text" placeholder="Name"></f7-input>
+        </f7-list-item>
+        <f7-list-item>
+          <f7-label floating>Password</f7-label>
+          <f7-input type="password" placeholder="Password"></f7-input>
+        </f7-list-item>
+        <f7-list-item>
+          <f7-label floating>E-mail</f7-label>
+          <f7-input type="email" placeholder="E-mail"></f7-input>
+        </f7-list-item>
+      </f7-list>
+
+      <f7-block-title>Form Without Labels</f7-block-title>
+      <f7-list form>
+        <f7-list-item>
+          <f7-input type="text" placeholder="Name"></f7-input>
+        </f7-list-item>
+        <f7-list-item>
+          <f7-input type="password" placeholder="Password"></f7-input>
+        </f7-list-item>
+        <f7-list-item>
+          <f7-input type="email" placeholder="E-mail"></f7-input>
+        </f7-list-item>
+      </f7-list>
+
+      <f7-block-title>Checkboxes</f7-block-title>
+      <f7-list form>
+        <f7-list-item v-for="n in 3" checkbox name="my-checkbox" :value="n" :title="'Checkbox ' + n"></f7-list-item>
+      </f7-list>
+
+      <f7-block-title>Radios</f7-block-title>
+      <f7-list form>
+        <f7-list-item v-for="n in 3" radio name="my-radio" :checked="n === 1" :value="n" :title="'Radio ' + n"></f7-list-item>
+      </f7-list>
+
+      <f7-block-title>Buttons</f7-block-title>
+      <f7-block inner>
+        <p><f7-button>Button</f7-button></p>
+        <p><f7-button round>Button Round</f7-button></p>
+        <p><f7-button fill>Button Fill</f7-button></p>
+        <p>
+          <f7-buttons>
+            <f7-button round active>Button 1</f7-button>
+            <f7-button round>Button 2</f7-button>
+            <f7-button round>Button 3</f7-button>
+          </f7-buttons>
+        </p>
+        <p>
+          <f7-buttons color="orange">
+            <f7-button round big>Button 1</f7-button>
+            <f7-button round big active>Button 2</f7-button>
+            <f7-button round big>Button 3</f7-button>
+          </f7-buttons>
+        </p>
+        <p>
+          <f7-grid>
+            <f7-col><f7-button big fill color="green">Send</f7-button></f7-col>
+            <f7-col><f7-button big fill color="red">Delete</f7-button></f7-col>
+          </f7-grid>
+        </p>
+        <p>
+          <f7-grid>
+            <f7-col><f7-button fill raised color="green">Raised</f7-button></f7-col>
+            <f7-col><f7-button raised color="red">Raised</f7-button></f7-col>
+            <f7-col><f7-button fill raised color="pink">Raised</f7-button></f7-col>
+          </f7-grid>
+        </p>
+      </f7-block>
+    </f7-page>
+  </template>
+
+  <!-- Dynamic Routing Page Template -->
+  <template id="page-dynamic-routing">
+    <f7-page>
+      <f7-navbar title="Dynamic Route" back-link="Back" sliding></f7-navbar>
+      <f7-block inner>
+        <ul>
+          <li><b>Url:</b> {{$route.url}}</li>
+          <li><b>Path:</b> {{$route.path}}</li>
+          <li><b>Hash:</b> {{$route.hash}}</li>
+          <li><b>Params:</b>
+            <ul>
+              <li v-for="(value, key) in $route.params"><b>{{key}}:</b> {{value}}</li>
+            </ul>
+          </li>
+          <li><b>Query:</b>
+            <ul>
+              <li v-for="(value, key) in $route.query"><b>{{key}}:</b> {{value}}</li>
+            </ul>
+          </li>
+          <li><b>Route:</b> {{$route.route}}</li>
+        </ul>
+      </f7-block>
+      <f7-block inner>
+        <f7-link @click="$router.back()">Go back via Router API</f7-link>
+      </f7-block>
+    </f7-page>
+  </template>
+
+	<script src="cordova.js"></script>
+	<script src="js/framework7.min.js"></script>
+	<script src="js/vue.min.js"></script>
+	<script src="js/framework7-vue.min.js"></script>
+	<script src="js/app.js"></script>
+	<script type="text/javascript" src="js/iframeResizer.min.js"></script>
+	<script type="text/javascript">
+		iFrameResize({log:false});
+	</script>
+
+
+</body>
+</html>
