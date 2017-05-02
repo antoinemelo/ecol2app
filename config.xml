@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.ecol2.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>ecol2comV1.02</name>
+    <name>ecol2app</name>
     <description>
-        A basic Framework7 template for PhoneGap.
+        Une application ecol2com
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="antoinemelo.ch@gmail.com" href="http://ecol2.com">
+        Antoine Melo
     </author>
     <content src="index.html" />
     <access origin="*" />
